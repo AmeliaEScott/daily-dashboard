@@ -8,8 +8,13 @@ version = "0.1.0"
 description = "Generate a dashboard with simple info you want before leaving home"
 readme = "README.md"
 dependencies = [
-  "ConfigArgParse",
-  "handlebars",
+    "ConfigArgParse",
+    "handlebars",
+    "aiohttp",
+    "aiofiles",
+    "thefuzz",
+    "pandas",
+    "python-dotenv",
 ]
 requires-python = ">= 3.12"
 

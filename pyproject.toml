@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "daily-dashboard"
+version = "0.1.0"
+description = "Generate a dashboard with simple info you want before leaving home"
+readme = "README.md"
+dependencies = [
+  "ConfigArgParse",
+  "handlebars",
+]
+requires-python = ">= 3.12"
+
+[project.urls]
+homepage = "https://github.com/AmeliaEScott/daily-dashboard"
+
+[project.scripts]
+daily_dashboard = "daily_dashboard.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/daily_dashboard"]
+
+[tool.uv]
+package = true

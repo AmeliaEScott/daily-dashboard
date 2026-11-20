@@ -1,9 +1,6 @@
 import os
 
 from daily_dashboard.data.wmata import WmataApi
-from pathlib import Path
-import asyncio
-import pandas as pd
 from dotenv import load_dotenv
 
 
@@ -17,6 +14,8 @@ def main():
     ))
     print("\n\n")
     print(api.find_stops_by_name("srfjfykifs", count=10))
+    print("\n\n")
+    print(api.get_bus_predictions([]))
 
 
 if __name__ == "__main__":
